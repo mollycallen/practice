@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container::after {
+  background: url("../natureicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+}
+
+.main-container .welcome {
+  padding: 1rem;
+  width: 40%;
+  min-width: 22rem;
+  position: relative;
+  animation-name: welcome;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.welcome h2 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+.welcome .text {
+  font-size: 1.5rem;
+}
+.welcome .big-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 7rem;
+  color: #05a098;
+}
+
+.main-container .skills-container {
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  animation-name: skills;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.skills-container .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.skills-container .skill {
+  padding: 1rem;
+  transition: all 0.5s ease-out;
+}
+.skills-container .skill:hover {
+  background: rgba(255, 255, 255, 0.5);
+
+  border-radius: 1rem;
+}
+.skills-container h3 {
+  font-size: 2rem;
+}
+
+.skills-container .skill-subheader {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.skills-container .skill-sublist {
+  font-size: 1rem;
+  padding-left: 1.5rem;
+}
+@keyframes welcome {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+@keyframes skills {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-container .welcome {
+    width: 90%;
+    padding-left: 0;
+  }
+  .main-container .skills-container {
+    width: 80%;
+  }
+  .skills-container .skills-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #555;
+}
+header {
+  color: #555;
+  padding: 2rem;
+  text-align: center;
+}
+header .desktop {
+  font-size: 3rem;
+  display: block;
+  color: #333;
+}
+header .tablet,
+header .mobile {
+  display: none;
+}
+.comment-container {
+  width: min(90%, 75rem);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.comment {
+  --background: hsl(197, 50%, 75%);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
+  background: var(--background);
+  padding: 1rem;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+
+.comment .header {
+  display: grid;
+  grid-template-columns: 5rem auto;
+  gap: 1rem;
+}
+.comment img {
+  border: 3px solid #333;
+  width: 4rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.comment h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.comment h3 {
+  font-size: 1.2rem;
+}
+.comment.one {
+  grid-column: 1 / span 2;
+}
+.comment.four {
+  grid-column: 1 / span 2;
+}
+.comment.five {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+/* // ----------------------------
+// tablet media query
+// ---------------------------- */
+@media (max-width: 760px) {
+  body {
+    background: hsl(197, 50%, 92%);
+  }
+  header .desktop,
+  header .mobile {
+    display: none;
+  }
+  header .tablet {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .comment h2 {
+    font-size: 1.2rem;
+  }
+  .comment-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+  }
+  .comment.one {
+    grid-column: 1 / span 2;
+  }
+  .comment.four {
+    grid-column: 1 / span 2;
+  }
+  .comment.five {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+  }
+}
+/* // ----------------------------
+// mobile media query
+// ---------------------------- */
+@media (max-width: 480px) {
+  body {
+    background: #333;
+  }
+  header .desktop,
+  header .tablet {
+    display: none;
+  }
+  header .mobile {
+    display: block;
+    color: #ddd;
+    font-size: 1.5rem;
+  }
+  .comment-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: auto;
+  }
+  .comment.one {
+    grid-column: 1;
+  }
+  .comment.four {
+    grid-column: 1;
+  }
+  .comment.five {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

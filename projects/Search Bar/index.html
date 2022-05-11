@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        integrity="sha512-yFjZbTYRCJodnuyGlsKamNE/LlEaEAxSUDe5+u61mV8zzqJVFOH7TnULE2/PP/l5vKWpUNnF4VGVkXh3MjgLsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js" type="module" defer></script>
+    <title>Message Board</title>
+</head>
+
+<body>
+    <div class="search-wrapper">
+
+        <input type="search" id="search" placeholder="search users" data-search>
+        <button data-search-btn><img src="./imgs/search.png" alt="search"></button>
+
+    </div>
+
+    <div class="user-container" data-user-container>
+
+    </div>
+    <div class="popup" data-todo-popup>
+        <div class="heading">
+            <div class="user-name"></div>
+            <div class="close">&#10006;</div>
+        </div>
+        <div class="todo-container" data-todo-container>
+        </div>
+    </div>
+    <template data-user-template>
+        <div class="user-card card">
+            <div class="user-name" data-user-name></div>
+            <div class="user-email" data-email></div>
+            <div class="phone" data-phone></div>
+            <div class="company" data-company></div>
+            <div class="website" data-website></div>
+            <button class="btn post-btn" data-post-btn><span data-view-hide>View Posts</span>
+                <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="post-container" data-post-container></div>
+            <button class="btn todo-btn" data-todo-btn> <i class="fa-solid fa-list"></i>View Tasks </button>
+            <div class="todos-container" data-todo-container></div>
+
+        </div>
+    </template>
+    <template data-post-template>
+        <div class="post">
+            <div class="title" data-post-title></div>
+            <div class="body" data-post-body></div>
+            <div class="post-btn btn" data-comment-btn><span data-view-hide>View Comments</span><i
+                    class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="comment-container" data-comment-container></div>
+        </div>
+    </template>
+    <template data-comment-template>
+        <div class="comment">
+            <div class="name" data-post-name></div>
+            <div class="email" data-post-email></div>
+            <div class="body" data-post-body></div>
+        </div>
+    </template>
+    <template data-todo-template>
+        <div class="todo">
+            <div><img src="./imgs/success-green-check-mark.png" alt="checkmark" class="checkmark"></div>
+            <div class="title" data-todo-title></div>
+
+        </div>
+    </template>
+
+
+</body>
+
+</html>

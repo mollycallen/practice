@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.game {
+  padding: 2rem 4rem;
+  width: 50rem;
+  height: 45rem;
+  margin: auto;
+  background-color: rgb(48, 48, 128);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  color: rgb(227, 220, 235);
+  max-width: 50rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+}
+.score h2 {
+  font-size: 2rem;
+}
+.score p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.intro {
+  color: rgb(48, 48, 128);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 8rem;
+  color: rgb(227, 220, 235);
+}
+
+.intro-button,
+.match button {
+  background: rgb(18, 114, 106);
+  padding: 2rem 4rem;
+  border: none;
+  color: rgb(227, 220, 235);
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+  color: rgb(167, 164, 172);
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+.hands img {
+  width: 12rem;
+  height: 12rem;
+}
+.hands,
+.hand-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.option-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+}
+.hand-labels {
+  text-align: center;
+  color: rgb(167, 164, 172);
+  font-size: 1.5rem;
+}
+
+.player-hand {
+  transform: rotate(90deg);
+}
+.computer-hand {
+  transform: rotate(-90deg) scaleX(-1);
+}
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: rotate(-90deg) scaleX(-1) translate(0px);
+  }
+  25% {
+    transform: rotate(-90deg) scaleX(-1) translateX(-20px);
+  }
+  50% {
+    transform: rotate(-90deg) scaleX(-1) translateX(0px);
+  }
+  75% {
+    transform: rotate(-90deg) scaleX(-1) translateX(-20px);
+  }
+  100% {
+    transform: rotate(-90deg) scaleX(-1) translateX(0px);
+  }
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotate(90deg) translate(0px);
+  }
+  25% {
+    transform: rotate(90deg) translateX(-20px);
+  }
+  50% {
+    transform: rotate(90deg) translateX(0px);
+  }
+  75% {
+    transform: rotate(90deg) translateX(-20px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(0px);
+  }
+}

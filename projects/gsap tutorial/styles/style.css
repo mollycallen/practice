@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  height: 100%;
+  width: 100%;
+  background: #504e4e;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cover {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.cover-date {
+  position: absolute;
+  color: white;
+  opacity: 0.7;
+  left: 5%;
+  bottom: 5%;
+  font-size: 1.5rem;
+}
+
+nav {
+  background: white;
+  z-index: 2;
+  width: 40%;
+  height: 20%;
+  color: #916356;
+}
+
+.nav-closed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 20%;
+  position: absolute;
+}
+
+.nav-closed ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  cursor: pointer;
+}
+
+.nav-open {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  top: 20%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+.clothing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.clothing h2 {
+  font-size: 2.5rem;
+}
+
+.clothing ul {
+  list-style: none;
+}
+
+.clothing ul li {
+  padding-bottom: 1rem;
+}
+
+.clothing ul li a {
+  color: #916356;
+  text-decoration: none;
+}
+
+.nav-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.nav-images img {
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */
