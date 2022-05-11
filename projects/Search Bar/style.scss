@@ -1,0 +1,308 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --dark: #293241;
+  --accent: #ee6c4d;
+  --light: #e0fbfc;
+  --white: #fff;
+  --blue: #3d5a80;
+  --light-blue: #98c1d9;
+  --light-gray: #ddd;
+
+  background: var(--blue);
+}
+.search-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: Min(400px, 90%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background: var(--light-blue);
+  border-radius: 0.5rem;
+}
+.search-wrapper img {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+.search-wrapper button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+input {
+  padding: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: var(--light-blue);
+  color: var(--dark);
+  width: 100%;
+}
+
+// ------------------------------------------------
+//  Users
+// ------------------------------------------------
+
+.user-container {
+  width: 90%;
+  height: 100%;
+}
+.user-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--light-blue);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 5px 5px 15px -6px #000000;
+  box-shadow: 5px 5px 15px -6px #000000;
+  margin-bottom: 1rem;
+}
+
+.user-card > .user-name {
+  grid-column: 1;
+  grid-row: span 2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.user-card > .user-email,
+.user-card > .phone,
+.user-card > .company,
+.user-card > .website {
+  grid-column: 2;
+  justify-self: flex-end;
+}
+.user-card > .post-btn {
+  grid-column: 1;
+  grid-row: 4;
+}
+.user-card > .todo-btn {
+  grid-column: 1;
+  grid-row: 3;
+}
+// ------------------------------------------------
+//  Posts
+// ------------------------------------------------
+.post-container {
+  grid-column: span 2;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.post-container .post {
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.post-container .title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.post-container .body {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+// ------------------------------------------------
+//  Comments
+// ------------------------------------------------
+
+.comment-container {
+  display: grid;
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 1rem;
+}
+
+.comment-container .comment {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.post-container .name {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.post-container .email {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+.post-container .body {
+  margin-bottom: 1rem;
+}
+
+// ------------------------------------------------
+//  Todo popup
+// ------------------------------------------------
+.popup {
+  display: none;
+  z-index: 2;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+  border: 2px solid black;
+  background: var(--white);
+  width: 30rem;
+  height: 70vh;
+  border-radius: 3px;
+}
+
+.popup .heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-style: bolder;
+  color: var(--white);
+  padding-bottom: 0.5rem;
+  background: var(--dark);
+  padding: 1rem;
+}
+.popup .todo-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.popup .close {
+  align-self: right;
+  cursor: pointer;
+}
+.todo {
+  display: flex;
+  justify-content: left;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+.todo .title::before {
+  content: "\2023 ";
+  padding: 0 0.5rem;
+}
+.todo-container .todo:nth-child(even) {
+  background: var(--light-gray);
+}
+
+.todo .checkmark {
+  width: 1rem;
+  height: 1rem;
+}
+// ------------------------------------------------
+//  General styles
+// ------------------------------------------------
+.btn {
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+.fa-chevron-down {
+  padding: 0 0.4rem;
+}
+.fa-list {
+  padding-right: 0.4rem;
+}
+.rotate-arrow {
+  transform: rotate(180deg);
+}
+.view {
+  display: inline;
+}
+.hide {
+  display: none;
+}
+// ------------------------------------------------
+//  Media queries
+// ------------------------------------------------
+
+@media only screen and (max-width: 900px) {
+  body {
+    background: rgb(231, 180, 86);
+  }
+
+  // ------------------------
+  //  Users media query
+  // --------------------------
+
+  .user-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .user-card > .user-name {
+    grid-row: span 1;
+  }
+  .user-card > .user-email,
+  .user-card > .phone,
+  .user-card > .company,
+  .user-card > .website {
+    grid-column: 1;
+    justify-self: flex-start;
+  }
+  .user-card > .post-btn {
+    grid-row: 7;
+  }
+  .user-card > .todo-btn {
+    grid-row: 6;
+  }
+  // ------------------------
+  //  Posts media query
+  // --------------------------
+  .post-container {
+    grid-column: 1;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  // --------------------------
+  //  Todo popup media query
+  // ----------------------------
+  .popup {
+    width: Min(70rem, 80vw);
+    height: 70vh;
+    border-radius: 3px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    background: rgb(67, 184, 125);
+  }
+  .post-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

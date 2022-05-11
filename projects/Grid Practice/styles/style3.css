@@ -1,0 +1,186 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  background: #333;
+  color: white;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "header-area"
+    "nav-area"
+    "main-area";
+}
+header,
+.sidebar {
+  background: #888;
+}
+header {
+  padding: 2rem 2rem 1rem 2rem;
+  grid-area: header-area;
+}
+.sidebar {
+  padding-bottom: 1rem;
+  grid-area: nav-area;
+}
+.main-content {
+  grid-area: main-area;
+}
+
+header .logo {
+  font-family: "Moon Dance", cursive;
+  font-size: 3rem;
+}
+.sidebar nav {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+  grid-gap: 2rem;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1.5rem;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: white;
+}
+.main-content {
+  background: #333;
+  padding: 3rem;
+}
+.main-content .portfolio {
+  color: black;
+}
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+.portfolio-item {
+  background: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+}
+.portfolio-item.one {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-image: url(//unsplash.it/300/200);
+  background-size: cover;
+  background-position: center;
+  background-color: mediumslateblue;
+  background-blend-mode: multiply;
+}
+
+.portfolio-item.two {
+  grid-row: span 3;
+  grid-column: span 3;
+  background-image: url(//unsplash.it/800/600);
+  background-size: cover;
+  background-position: center;
+  background-color: orange;
+  background-blend-mode: multiply;
+}
+.portfolio-item.three {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-image: url(//unsplash.it/400/300);
+  background-size: cover;
+  background-position: center;
+  background-color: steelblue;
+  background-blend-mode: multiply;
+}
+.portfolio-item.four {
+  grid-row: span 1;
+  grid-column: span 1;
+  background-image: url(//unsplash.it/200/200);
+  background-size: cover;
+  background-position: center;
+  background-color: yellow;
+  background-blend-mode: multiply;
+}
+.portfolio-item.five {
+  grid-row: span 3;
+  grid-column: span 2;
+  background-image: url(//unsplash.it/300/300);
+  background-color: crimson;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio-item.six {
+  grid-row: span 2;
+  grid-column: span 3;
+  background-image: url(//unsplash.it/400/200);
+  background-color: cyan;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+/* small screen */
+@media (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10rem 1fr;
+    grid-template-areas:
+      "header-area main-area"
+      "nav-area main-area";
+  }
+  header .logo {
+    font-size: 2rem;
+  }
+  .sidebar nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 20fr;
+    grid-template-columns: 1fr;
+  }
+  .sidebar nav a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 1.2rem;
+  }
+  .portfolio {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  .portfolio-item.one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .portfolio-item.two {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .portfolio-item.three {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .portfolio-item.four {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .portfolio-item.five {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .portfolio-item.six {
+    grid-column: 1;
+    grid-row: 6;
+  }
+}

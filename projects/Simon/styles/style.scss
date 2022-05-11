@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100%;
+  margin: auto;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .game {
+  margin: 1rem;
+  font-family: "Play", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 30rem;
+  width: 30rem;
+  filter: drop-shadow(0 0 10px rgb(29, 29, 29));
+}
+.notes {
+  margin: 1rem;
+  font-family: "Caveat", cursive;
+  width: 30rem;
+  height: 30rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  color: black;
+  background-image: url("../imgs/lined-paper.png");
+  background-size: 100% 100%;
+  border: 3px solid black;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.notes h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+}
+.notes h3 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.notes .list {
+  margin-left: 5rem;
+}
+.colors {
+  max-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+.notes .list h3 {
+  text-decoration: underline;
+}
+.notes .sequence-num {
+  margin-left: 5rem;
+}
+
+.message {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  justify-self: flex-end;
+}
+.message .correct {
+  color: green;
+}
+
+.message .incorrect {
+  color: rgb(133, 12, 12);
+}
+
+.notes .message button {
+  font: inherit;
+  color: rgb(133, 12, 12);
+  padding: 0rem 1rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  margin-left: 1rem;
+}
+.notes .message button:hover {
+  color: white;
+  background: rgb(32, 32, 32);
+}
+.hidden {
+  display: none;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.game .controls {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+  border-radius: 100%;
+  padding: 2rem;
+  z-index: 2;
+}
+.game .controls h2 {
+  font-size: 5rem;
+}
+.game .controls .btn {
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.game .controls .start:hover {
+  background: rgb(32, 131, 32);
+  color: white;
+}
+
+.game .controls .stop:hover {
+  background: rgb(160, 39, 39);
+  color: white;
+}
+.game .lights {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+}
+.game .lights > div {
+  width: 15rem;
+  height: 15rem;
+  cursor: pointer;
+  border: 4px solid black;
+}
+.game .lights .green {
+  background-color: rgb(2, 85, 2);
+
+  border-top-left-radius: 50%;
+  border-bottom: none;
+  border-right: none;
+}
+
+.game .green.highlight {
+  background-color: rgb(43, 250, 7);
+}
+
+.game .lights .blue {
+  background-color: rgb(2, 39, 87);
+  border-bottom-right-radius: 50%;
+  border-top: none;
+  border-left: none;
+}
+
+.game .blue.highlight {
+  background-color: rgb(7, 114, 253);
+}
+
+.game .lights .red {
+  background-color: rgb(133, 31, 6);
+  border-top-right-radius: 50%;
+}
+.game .red.highlight {
+  background-color: rgb(248, 11, 11);
+}
+.game .lights .yellow {
+  background-color: rgb(240, 240, 145);
+
+  border-bottom-left-radius: 50%;
+}
+.game .yellow.highlight {
+  background-color: rgb(255, 255, 0);
+}
