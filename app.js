@@ -1,7 +1,8 @@
 const closeBtn = document.querySelector(".close-btn");
 const menuBtn = document.querySelector(".menu i");
-const navDropDowns = document.querySelectorAll(".nav-heading > a");
-console.log(navDropDowns);
+const navHeadings = document.querySelectorAll(".heading-btn");
+
+
 
 function displayNav() {
     const nav = document.querySelector(".nav-bar");
@@ -17,10 +18,12 @@ function closeNav() {
 
 menuBtn.addEventListener("click", displayNav);
 closeBtn.addEventListener("click", closeNav);
-navDropDowns.forEach(dropDown => {
-    dropDown.addEventListener("click", (e) => {
-        e.target.nextElementSibling.classList.toggle("not-visible");
-        e.target.children[0].classList.toggle('rotate');
-        console.log(e.target.children)
+
+navHeadings.forEach(subheading => {
+    subheading.addEventListener("click", (e) => {
+        //console.log(e.currentTarget)
+        e.currentTarget.nextElementSibling.classList.toggle("not-visible");
+        e.currentTarget.children[0].classList.toggle('rotate');
     })
 })
+

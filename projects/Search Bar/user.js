@@ -78,8 +78,8 @@ export class User {
 
             todoContainer.append(todo.div);
         })
-        //console.log(e)
-        popup.style.top = `${e.pageY}px`;
+        console.log(e.pageY + e.offsetY)
+        popup.style.top = `${e.pageY + e.offsetY}px`;
         popup.style.display = "flex";
 
     }

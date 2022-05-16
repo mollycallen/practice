@@ -82,9 +82,11 @@ input {
 .user-container {
   width: 90%;
   height: 100%;
+  position: relative;
 }
 
 .user-card {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];

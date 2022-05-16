@@ -31,7 +31,7 @@ body {
 }
 .container header {
   font-family: "Original Surfer", cursive;
-  font-size: 5rem;
+  font-size: 3rem;
   margin-top: 3rem;
   text-align: center;
   color: #032f5c;
@@ -68,7 +68,7 @@ body {
 .controls button {
   font-family: "Original Surfer", cursive;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: #064789;
   color: white;
   border: 5px solid #064789;
@@ -145,12 +145,12 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 220px;
-  height: 100px;
+  //width: 220px;
+  //height: 100px;
   background: white;
   padding: 1rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   position: absolute;
   border-radius: 1rem;
   border: 2px solid black;

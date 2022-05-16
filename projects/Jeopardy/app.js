@@ -145,7 +145,7 @@ function buildBoard() {
     const catDivs = document.querySelectorAll(".cat-header");
     catDivs.forEach((cat, index) => {
         cat.innerHTML = activeCategories[index].name;
-        fetch(`http://jservice.io/api/category?id=${activeCategories[index].id}`)
+        fetch(`https://jservice.io/api/category?id=${activeCategories[index].id}`)
             .then(result => result.json())
             .then(data => {
                 activeCategories[index].storeClues(data);

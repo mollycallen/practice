@@ -191,6 +191,9 @@ header .contact-social img {
   -moz-box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.75);
   transition: all 1s ease-in-out;
 }
+.nav-bar i {
+  z-index: -1;
+}
 .nav-bar .close-btn {
   position: absolute;
   top: 10px;
@@ -204,11 +207,12 @@ header .contact-social img {
   font-weight: bold;
 }
 .nav-link a:hover,
-.nav-heading a:hover {
+.nav-heading button:hover {
   color: $dark-gray;
   font-weight: bold;
 }
-.nav-bar a {
+.nav-bar a,
+.nav-bar button {
   color: $coral;
   text-decoration: none;
 }
@@ -218,8 +222,11 @@ header .contact-social img {
 .nav-bar li {
   padding-bottom: 1rem;
 }
-.nav-heading > a {
+.nav-heading > button {
   font-size: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .nav-dropdown li {

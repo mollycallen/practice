@@ -65,8 +65,10 @@ input {
 .user-container {
   width: 90%;
   height: 100%;
+  position: relative;
 }
 .user-card {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;

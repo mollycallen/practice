@@ -252,6 +252,10 @@ header .contact-social img {
   transition: all 1s ease-in-out;
 }
 
+.nav-bar i {
+  z-index: -1;
+}
+
 .nav-bar .close-btn {
   position: absolute;
   top: 10px;
@@ -267,12 +271,13 @@ header .contact-social img {
 }
 
 .nav-link a:hover,
-.nav-heading a:hover {
+.nav-heading button:hover {
   color: #323232;
   font-weight: bold;
 }
 
-.nav-bar a {
+.nav-bar a,
+.nav-bar button {
   color: #dc6d44;
   text-decoration: none;
 }
@@ -285,8 +290,11 @@ header .contact-social img {
   padding-bottom: 1rem;
 }
 
-.nav-heading > a {
+.nav-heading > button {
   font-size: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .nav-dropdown li {
