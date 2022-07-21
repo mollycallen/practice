@@ -1,0 +1,56 @@
+.item-detail-popup {
+	border: 2px solid var(--gray);
+	position: absolute;
+	transform: translate(-50%, -50%);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: 50vw;
+	background: whitesmoke;
+	overflow-x: hidden;
+	color: var(--dark-gray);
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.item-detail-popup img {
+	max-width: 25vw;
+	height: auto;
+	float: right;
+	padding: 1rem;
+}
+.item-detail-popup .price {
+	padding-top: 1rem;
+	font-weight: bold;
+}
+.item-detail-popup .desc,
+.item-detail-popup .stars {
+	font-size: 0.8rem;
+}
+.item-detail-popup div {
+	margin-bottom: 1rem;
+	line-height: 1.5rem;
+}
+.item-detail-popup h3,
+.item-detail-popup h4 {
+	padding: 2rem 0rem;
+}
+.item-detail-link {
+	cursor: pointer;
+}
+.item-detail-link:hover {
+	text-decoration: underline;
+}
+
+.item-detail-popup .close-btn {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: none;
+	font-size: 1.5rem;
+	padding: 0.5rem 0rem;
+	color: var(--gray);
+}
+.item-detail-popup .close-btn:hover {
+	color: var(--dark-gray);
+}

@@ -1,0 +1,49 @@
+/*  -------------  */
+/*  footer styles  */
+/*  -------------  */
+
+footer {
+	background-image: linear-gradient(to bottom, var(--light-green), white);
+	display: flex;
+	flex-direction: column;
+	padding-top: 1.5rem;
+	height: 25vh;
+	max-height: 25vh;
+}
+.footer-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-weight: bold;
+}
+.footer-nav h3 {
+	color: var(--dark-gray);
+	font-size: 1rem;
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+}
+.footer-nav .nav-item:hover {
+	background: #ddd;
+}
+.footer-nav .nav-item {
+	padding: 0.25rem;
+}
+.footer-nav p {
+	font-size: 0.8rem;
+	font-weight: normal;
+	line-height: 1.5rem;
+}
+.footer-nav a {
+	text-decoration: none;
+	color: inherit;
+}
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 0.5rem;
+}
+.social-icons i {
+	padding: 1rem;
+	color: var(--dark-gray);
+}

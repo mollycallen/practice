@@ -1,0 +1,34 @@
+.favorites-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	margin: 2rem 3rem 5rem 3rem;
+	min-width: 50vw;
+}
+
+.favorites-wrapper .favorites-grid {
+	min-width: 50vw;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	row-gap: 1rem;
+}
+
+.favorites-grid .grid-header {
+	padding: 1rem;
+	background: var(--gray);
+	color: white;
+}
+.favorites-grid .grid-detail {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px dashed var(--gray);
+	padding: 0.5rem;
+}
+
+.favorites-grid .msg {
+	padding: 2rem;
+	text-align: center;
+}
+.favorites-grid button {
+	margin-right: 0.5rem;
+}

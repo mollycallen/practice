@@ -1,0 +1,48 @@
+/*  -------------------  */
+/*  feature item styles  */
+/*  -------------------  */
+.feature-item {
+	position: relative;
+	max-width: 40vw;
+	height: 100%;
+	padding: 2rem;
+	background: whitesmoke;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 8px 9px 11px -6px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 8px 9px 11px -6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 8px 9px 11px -6px rgba(0, 0, 0, 0.75);
+}
+
+.feature-item h2 {
+	font-size: 1rem;
+}
+.feature-item h3 {
+	color: var(--green);
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+	font-size: 0.8rem;
+}
+
+.feature-item .item-info {
+	float: left;
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+	margin-top: 1rem;
+	line-height: 1.4rem;
+}
+
+.feature-item .item-info h2 {
+	padding: 1.5rem 0rem;
+}
+.feature-item .info-msg {
+	display: flex;
+	flex-direction: column;
+}
+.feature-item img {
+	float: right;
+	margin: 0rem 0rem 1rem 1rem;
+	object-fit: contain;
+	max-width: 300px;
+}

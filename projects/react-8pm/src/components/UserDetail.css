@@ -1,0 +1,93 @@
+.account-container {
+	margin: 3rem auto;
+	display: flex;
+	flex-direction: column;
+	min-width: 60vw;
+	width: fit-content;
+}
+
+.account-container .greeting-div {
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.account-container h3 {
+	color: var(--dark-gray);
+	margin-bottom: 1rem;
+}
+.account-info {
+	color: var(--dark-gray);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: whitesmoke;
+	border-radius: 0.5rem;
+}
+.account-info .header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.account-info p {
+	padding: 0rem 1rem;
+}
+.account-container h4 {
+	font-size: 0.8rem;
+	background: var(--gray);
+	color: white;
+	padding: 1rem;
+	height: fit-content;
+	margin-bottom: 1rem;
+}
+
+.account-container .detail {
+	line-height: 1.4rem;
+	padding-bottom: 1rem;
+	text-transform: capitalize;
+	font-size: 0.8rem;
+	width: 100%;
+}
+.account-container .email {
+	text-transform: none;
+}
+.order-history-container .history-grid {
+	background: whitesmoke;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5rem 0.5rem;
+	grid-auto-flow: row;
+}
+.account-container .history-item {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.account-container .item-detail {
+	display: flex;
+	flex-direction: row;
+}
+
+.log-wrapper {
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+	text-transform: capitalize;
+}
+.log-btn {
+	color: white;
+	background: var(--dark-gray);
+	border: none;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	margin: 0.3rem 0rem;
+	font-size: 0.8rem;
+}
+.log-btn:hover {
+	background: var(--green);
+}

@@ -1,0 +1,61 @@
+.cart-wrapper {
+	margin: auto;
+	width: fit-content;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--dark-gray);
+	min-height: 50vh;
+	position: relative;
+}
+.cart-wrapper h2 {
+	margin-bottom: 2rem;
+}
+.cart-wrapper table {
+	border-collapse: separate;
+	min-width: 50vw;
+}
+.cart-wrapper .table-header th {
+	background: var(--gray);
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+.cart-wrapper tbody td {
+	padding: 0.5rem;
+}
+.cart-wrapper th {
+	padding: 1.5rem 0.5rem;
+}
+
+.cart-wrapper .totals {
+	padding: 1rem 0rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+
+	color: black;
+	line-height: 2rem;
+	font-weight: bold;
+}
+.cart-wrapper .checkout-btn {
+	color: white;
+	background: var(--green);
+	border-radius: 0.5rem;
+	border: none;
+	padding: 1rem 4rem;
+	align-items: flex-end;
+	font-size: 1rem;
+	margin-top: 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.cart-wrapper .checkout-div {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}

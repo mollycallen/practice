@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--green: rgb(24, 91, 58);
+	--light-green: #8ea196;
+	--red: rgb(112, 33, 33);
+	--gray: rgb(137, 136, 136);
+	--dark-gray: rgb(69, 69, 69);
+	--display-font: "Courgette", cursive;
+}
+body {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

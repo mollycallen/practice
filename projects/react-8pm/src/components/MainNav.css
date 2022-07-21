@@ -1,0 +1,41 @@
+/*  ---------------  */
+/*  main nav styles  */
+/*  ---------------  */
+
+.main-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	color: var(--dark-gray);
+	padding: 0.5rem 1rem;
+}
+.main-nav a {
+	text-transform: uppercase;
+	color: var(--dark-gray);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.main-nav a:hover {
+	color: var(--green);
+}
+.main-nav .active,
+.main-nav .active:hover {
+	color: var(--red);
+	border-bottom: 4px solid var(--red);
+}
+.category-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.search-sale-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-sale-nav {
+	font-size: 0.8rem;
+}

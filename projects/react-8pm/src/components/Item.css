@@ -1,0 +1,21 @@
+.item-card {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: stretch;
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+	background: whitesmoke;
+	width: 20vw;
+	height: 100%;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.item-card h4 {
+	padding: 1rem 0rem;
+}
+.item-info {
+	height: 100%;
+}

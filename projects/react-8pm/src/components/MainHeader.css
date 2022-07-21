@@ -1,0 +1,78 @@
+/*  -------------  */
+/*  header styles  */
+/*  -------------  */
+
+header {
+	background-image: linear-gradient(to bottom, var(--light-green), white);
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.44);
+	-webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.44);
+	-moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.44);
+}
+.main-header {
+	padding: 0.7rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header h1 {
+	font-family: var(--display-font);
+	font-size: 3rem;
+	color: var(--green);
+	text-decoration: none;
+}
+header a {
+	text-decoration: none;
+}
+header .shipping-info {
+	font-size: 0.8rem;
+	color: black;
+	font-weight: bold;
+}
+header .shipping-info span {
+	color: var(--red);
+}
+header .phone-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.7rem;
+	border-left: 2px solid var(--gray);
+	border-right: 2px solid var(--gray);
+	padding: 1rem;
+}
+header .icons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header i {
+	color: var(--dark-gray);
+	font-size: 1.3rem;
+	padding: 0.5rem;
+}
+header .greeting {
+	font-size: 0.8rem;
+	color: var(--dark-gray);
+	text-transform: capitalize;
+	padding: 0rem 1rem;
+}
+
+header .cart-icon {
+	position: relative;
+	padding-right: 0.4rem;
+}
+header .cart-ct {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 0.8rem;
+	background: var(--red);
+	color: white;
+	border-radius: 50%;
+	padding: 0.2rem;
+}

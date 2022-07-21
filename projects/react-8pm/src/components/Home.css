@@ -1,0 +1,10 @@
+.home-div {
+	width: 90vw;
+	padding: 2rem 2rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow-x: hidden;
+	gap: 2rem;
+}
